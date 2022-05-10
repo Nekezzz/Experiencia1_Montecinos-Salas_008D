@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>quienes somos</title>
+    <title>registro</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
     <script>
@@ -21,6 +21,21 @@
               obj.style.background= "#62c355";
               
           }
+  </script>
+    <script>
+      function CambiaColor(a)
+      {
+          a.style.background = "#E9967A";
+      }
+  
+      function CambiarMayuscula()
+      {
+          var a = document.getElementById('ema');
+          a.value = a.value.toUpperCase();
+      }
+  </script>
+
+
   </script>
   </head>
 <body style="background-color: olivedrab;">
@@ -63,7 +78,12 @@
         </li>   
         <li class="nav-item">
           <a class="btn btn-outline-warning my-2 my-sm-0" href="ayuda.html">ayuda</a>
-        </li>    
+        </li>
+        <li class="nav-item">
+
+        
+        
+           
       </ul>
     </div>
   </nav>
@@ -71,23 +91,66 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
 <br>
+<div class="container">
+<div class="card-text" style="background-color: #62c355;">
+    <form action="EjemploJs.html" class="col-lg-12" method="post" name="datos" onsubmit="return validacion()">
+        <div style="background-color: green;">
+            <br>
+            <div class="form-group">
+              
+              <h2 class="h2" onmouseover="style.color = 'white'" onmouseout="style.color='black'">Complete el registro</h2>
+            </div>
+            <br>
+            </div>
+            <br>
+    
+   
+      <div class="form-group">
+        </div>
+        <div class="form-group">
+          <label for="nombre">nombre:</label>
+      
+        <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingrese nombre" onfocus="CambiaColor(this)"></div>
+        <div class="form-group">
+          <label for="nombreul">apellido:</label>
+      
+        <input type="text" name="nombreul" id="nombreul" class="form-control" placeholder="Ingrese nombre" onfocus="CambiaColor(this)"></div>
+        <div class="form-group">
+        <label for="ed">Edad:</label>
+    
+      <input type="number" name="ed" id="ed" class="form-control" placeholder="...." min="18" onfocus="CambiaColor(this)"></div>
+      <div class="form-group">
+        <label for="nume">Telefono:</label>
+    
+      <input type="number" name="nume" id="nume" class="form-control" placeholder="+56992032431" onfocus="CambiaColor(this)"></div>
+      <div class="form-group">
+        <label for="date">Fecha de nacimiento:</label>
+    
+      <input type="date" name="date" id="date" class="form-control" placeholder="dd/mm/yyyy" onfocus="CambiaColor(this)"></div>
+      <div class="form-group">
+        <label for="ema">Email:</label>
+    
+      <input type="email" name="ema" id="ema" class="form-control" placeholder="Example@gmail.com" onfocus="CambiaColor(this)"></div>
+      <div class="form-group">
+        <label for="con">Ingrese una Contraseña:</label>
+     
+      <input type="password" name="con" id="con" class="form-control" placeholder="*********" onfocus="CambiaColor(this)"></div>
+      <div class="form-group">
+        <label for="conse">Ingrese denuevo la Contraseña:</label>
+     
+      <input type="password" name="conse" id="conse" class="form-control" placeholder="*********" onfocus="CambiaColor(this)"></div><br>
+      
+      
+      <div class="form-group">
+    
+      <input type="submit" class="btn btn-lg btn-outline-primary btn-block" value="Registrarse"></div>
+      <br>
+    
+     
+    
+    </form>
+      </div></div><br>
 
-<div class="row jumbotron" id="qSomos" style="background-color: #ABBD63;">
-  <div class="col-lg-6">
-      <div>
-          <h1 class="h1">Happy Garden</h1><br>
-          <h2 class="lead" style="color: white;"><strong>Quiénes somos</strong></h2>
-          <p style="color: white;">
-            Nuestra empresa comenzo el 01/04/2022, somos una tienda ya con mucho tiempo en el cultivo de plantas de todo tipo y queremos informar nuestro aprendizaje. <br><br>
-            
-            La idea de vender productos a la vez que informamos es que nos dimos cuenta que las demás tiendas tienen los productos con un costo demasiado elevado para el bolsillo de de todo usuario. Por lo tanto nuestra empresa se encarga de brindarte la posibilidad de enseñarte y ofrecerte la mejor combinación precio calidad que se puede.
-
-            
-          </p>
-      </div>
-  </div>
-  <div class="row col-md-12">        <iframe  width="1077" height="480"  src="https://www.youtube.com/embed/m1V7wjUJ6Fs"        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;        encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>     </div>   </div>
-</div>
 <footer style="background-color: black;">
   <div class="row col-12">
       <div class="col-lg-2">

@@ -7,34 +7,66 @@
     <title>catalogo</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
+    <script>
+      
+      function Mover(obj)
+          {
+  
+              obj.style.background="green";
+             
+          }
+  
+          function MoverFuera(obj)
+          {
+              obj.style.background= "#62c355";
+              
+          }
+  </script>
   </head>
 <body style="background-color: olivedrab;">
 
-    <nav class="navbar navbar-expand-sm navbar-light " style="background-color: #62c355;">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        
-      
-        <a class="navbar-brand" href="#">
-          <img src="img/logo.png" width="100" height="60" alt="">
-        </a>
-        
-       
-        <div class="collapse navbar-collapse" id="opciones">   
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Principal</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="somos.html">Quienes Somos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="catalogo.html">Catálogo</a>
-            </li>         
-          </ul>
-        </div>
-      </nav>
+  <nav class="navbar navbar-expand-sm navbar-light " style="background-color: #62c355;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+  
+    <a class="navbar-brand" href="#">
+      <img src="img/logo.png" width="100" height="60" alt="">
+    </a>
+    
+   
+    <div class="collapse navbar-collapse" id="opciones">   
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <center><section>
+            <div class="reloj">
+              <span id="tiempo">00 : 00 : 00</span>
+             
+            </div>
+         </section>
+        <script src="script.js"></script></center> </li>
+        <li class="nav-item"  onmouseover="Mover(this)" onmouseout="MoverFuera(this)">
+          <a class="nav-link" href="index.html">Principal</a>
+        </li>
+        <li class="nav-item" onmouseover="Mover(this)" onmouseout="MoverFuera(this)">
+          <a class="nav-link" href="somos.html">Quienes Somos</a>
+        </li>
+        <li class="nav-item" onmouseover="Mover(this)" onmouseout="MoverFuera(this)">
+          <a class="nav-link" href="catalogo.html">Catálogo</a>
+        </li> 
+        <li class="nav-item" onmouseover="Mover(this)" onmouseout="MoverFuera(this)">
+          <a class="nav-link" href="api.html">Api</a>
+        </li>   
+        <li class="nav-item">
+          <a class="btn btn-outline-danger my-2 my-sm-0" href="login.html">Iniciar seción</a>
+        </li>   
+        <li class="nav-item">
+          <a class="btn btn-outline-warning my-2 my-sm-0" href="ayuda.html">ayuda</a>
+        </li>    
+      </ul>
+    </div>
+  </nav>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -128,61 +160,61 @@
     </div>
 </div>
 </div>
-    <footer style="background-color: black;">
-      <div class="row col-12">
-          <div class="col-lg-2">
-            <img src="img/3.png" width="200" height="120" alt="">
-          </div>
-          <div class="col-lg-1">
-              <a href="index.html" id="linkFooter"><strong>INICIO</strong></a>
-          </div>
-          <div class="col-lg-1">
-              <a href="somos.html"><strong>QUIENES SOMOS</strong></a>
-          </div>
-          <div class="col-lg-2">
-              <a href="catalogo.html"><strong>CATALOGO</strong></a>
-          </div>
+<footer style="background-color: black;">
+  <div class="row col-12">
+      <div class="col-lg-2">
+        <img src="img/3.png" width="200" height="120" alt="">
+      </div>
+      <div class="col-lg-1">
+          <a href="index.html" id="linkFooter"><strong>INICIO</strong></a>
+      </div>
+      <div class="col-lg-1">
+          <a href="somos.html"><strong>QUIENES SOMOS</strong></a>
+      </div>
+      <div class="col-lg-2">
+          <a href="catalogo.html"><strong>CATALOGO</strong></a>
+      </div>
 
 
-          <div class="col-lg-2">
-              <strong>Síguenos</strong>
-              <br><br>
-              <div class="row">
-                  <img src="img/2000px-Facebook_font_awesome.svg.png" alt="" width="30px" height="30px"
-                      style=" margin-left: 15px;">
-                  <img src="img/twitter.png" alt="" width="30px" height="30px" style=" margin-left: 10px;">
-                  <img src="img/Instagram.png" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+      <div class="col-lg-2">
+          <strong>Síguenos</strong>
+          <br><br>
+          <div class="row">
+            <a class="navbar-brand" href="index.html"><img src="img/2000px-Facebook_font_awesome.svg.png" alt="" width="30px" height="30px"
+                  style=" margin-left: 15px;"></a>
+                  <a class="navbar-brand" href="index.html"><img src="img/twitter.png" alt="" width="30px" height="30px" style=" margin-left: 10px;"></a>
+              <a class="navbar-brand" href="https://instagram.com/jungla.carnivora.chile?utm_medium=copy_link"><img src="img/Instagram.png" alt="" width="30px" height="30px" style=" margin-left: 10px;"></a>
 
-              </div>
-          </div>
-
-
-          <div class="col-lg-3">
-
-              <strong>Contacto</strong>
-              <br><br>
-              <div class="row">
-                  <img src="img/location.png" alt="" width="20px" height="20px"
-                      style="margin-right: 10px; margin-left: 15px;">
-                  <p>pje 5. Manzanal 3060, Peñaflor</p>
-              </div>
-              <div class="row">
-                  <img src="img/fono.png" alt="" width="20px" height="20px"
-                      style="margin-right: 10px; margin-left: 15px;">
-                  <p>+56 967176534</p>
-              </div>
-              <div class="row">
-                  <img src="img/email.png" alt="" width="20px" height="20px"
-                      style="margin-right: 10px; margin-left: 15px;">
-                  <p>ax.montecinos@duocuc.cl</p>
-              </div>
-              <br><br><br>
-              <p>&copy; Happy Garden - 2022</p>
-
-              
           </div>
       </div>
-  </footer>
+
+
+      <div class="col-lg-3">
+
+          <strong>Contacto</strong>
+          <br><br>
+          <div class="row">
+              <img src="img/location.png" alt="" width="20px" height="20px"
+                  style="margin-right: 10px; margin-left: 15px;">
+              <p>pje 5. Manzanal 3060, Peñaflor</p>
+          </div>
+          <div class="row">
+              <img src="img/fono.png" alt="" width="20px" height="20px"
+                  style="margin-right: 10px; margin-left: 15px;">
+              <p>+56 967176534</p>
+          </div>
+          <div class="row">
+              <img src="img/email.png" alt="" width="20px" height="20px"
+                  style="margin-right: 10px; margin-left: 15px;">
+              <p>ax.montecinos@duocuc.cl</p>
+          </div>
+          <br><br><br>
+          <p>&copy; Happy Garden - 2022</p>
+
+          
+      </div>
+  </div>
+</footer>
     
 </body>
 </html>

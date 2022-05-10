@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Comidas</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      
+      function Mover(obj)
+          {
+  
+              obj.style.background="green";
+             
+          }
+  
+          function MoverFuera(obj)
+          {
+              obj.style.background= "#62c355";
+              
+          }
+  </script>
+    <script>
+      
+        $(document).ready(function(){
+
+            $("#enviar").click(function(){
+                $.get("https://tienda-planta-default-rtdb.firebaseio.com/productos.json",function(data)
+                {
+
+                    $.each(data.producto,function(i,item)
+                        {
+                            $("#categorias").append("<tr><td>"+ item.id +
+                            "</td><td><img src='"+ item.imagen +"'>"+
+                            "</td><td>"+ item.nombre +
+                            "</td><td>"+ item.precio +
+                            "</td><td>"+ item.descripcion +"</td></tr>");
+                          
+                        });
+
+
+                });
+
+            });
+
+        });
+
+    </script>
+  </head>
+  <body style="background-color: olivedrab;">
+
+    <nav class="navbar navbar-expand-sm navbar-light " style="background-color: #62c355;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+      
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png" width="100" height="60" alt="">
+        </a>
+        
+       
+        <div class="collapse navbar-collapse" id="opciones">   
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <center><section>
+                <div class="reloj">
+                  <span id="tiempo">00 : 00 : 00</span>
+                 
+                </div>
+             </section>
+            <script src="script.js"></script></center> </li>
+            <li class="nav-item"  onmouseover="Mover(this)" onmouseout="MoverFuera(this)">
+              <a class="nav-link" href="index.html">Principal</a>
+            </li>
+            <li class="nav-item" onmouseover="Mover(this)" onmouseout="MoverFuera(this)">
+              <a class="nav-link" href="somos.html">Quienes Somos</a>
+            </li>
+            <li class="nav-item" onmouseover="Mover(this)" onmouseout="MoverFuera(this)">
+              <a class="nav-link" href="catalogo.html">Catálogo</a>
+            </li> 
+            <li class="nav-item" onmouseover="Mover(this)" onmouseout="MoverFuera(this)">
+              <a class="nav-link" href="api.html">Api</a>
+            </li>   
+            <li class="nav-item">
+              <a class="btn btn-outline-danger my-2 my-sm-0" href="login.html">Iniciar seción</a>
+            </li>   
+            <li class="nav-item">
+              <a class="btn btn-outline-warning my-2 my-sm-0" href="ayuda.html">ayuda</a>
+            </li>    
+          </ul>
+        </div>
+      </nav>
+
+<!--aqui empieza la api-->
+  
+<div class="container-fluid" style="background-color:bisque">
+    <div class="card-text">
+      
+    <h1>Api de productos </h1><br>
+    <input type="button" id="enviar" class="btn btn-primary" value="Consultar" width="60%"><br><br>
+    <div class="table-responsive-md">
+    <table class="table" id="categorias" style="background-color:aliceblue">
+        <thead>
+            <tr>
+                <th class="col-lg-1">id </th>
+                <th class="">imagen</th>
+                <th class="col-lg-2">nombre</th>
+                <th class="col-lg-2">precio</th>
+                <th class="col-lg-3">descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    
+</div>
+    <br>
+</div></div>
+<footer style="background-color: black;">
+  <div class="row col-12">
+      <div class="col-lg-2">
+        <img src="img/3.png" width="200" height="120" alt="">
+      </div>
+      <div class="col-lg-1">
+          <a href="index.html" id="linkFooter"><strong>INICIO</strong></a>
+      </div>
+      <div class="col-lg-1">
+          <a href="somos.html"><strong>QUIENES SOMOS</strong></a>
+      </div>
+      <div class="col-lg-2">
+          <a href="catalogo.html"><strong>CATALOGO</strong></a>
+      </div>
+
+
+      <div class="col-lg-2">
+          <strong>Síguenos</strong>
+          <br><br>
+          <div class="row">
+            <a class="navbar-brand" href="index.html"><img src="img/2000px-Facebook_font_awesome.svg.png" alt="" width="30px" height="30px"
+                  style=" margin-left: 15px;"></a>
+                  <a class="navbar-brand" href="index.html"><img src="img/twitter.png" alt="" width="30px" height="30px" style=" margin-left: 10px;"></a>
+              <a class="navbar-brand" href="https://instagram.com/jungla.carnivora.chile?utm_medium=copy_link"><img src="img/Instagram.png" alt="" width="30px" height="30px" style=" margin-left: 10px;"></a>
+
+          </div>
+      </div>
+
+
+      <div class="col-lg-3">
+
+          <strong>Contacto</strong>
+          <br><br>
+          <div class="row">
+              <img src="img/location.png" alt="" width="20px" height="20px"
+                  style="margin-right: 10px; margin-left: 15px;">
+              <p>pje 5. Manzanal 3060, Peñaflor</p>
+          </div>
+          <div class="row">
+              <img src="img/fono.png" alt="" width="20px" height="20px"
+                  style="margin-right: 10px; margin-left: 15px;">
+              <p>+56 967176534</p>
+          </div>
+          <div class="row">
+              <img src="img/email.png" alt="" width="20px" height="20px"
+                  style="margin-right: 10px; margin-left: 15px;">
+              <p>ax.montecinos@duocuc.cl</p>
+          </div>
+          <br><br><br>
+          <p>&copy; Happy Garden - 2022</p>
+
+          
+      </div>
+  </div>
+</footer>
+    
+</body>
+</html>
